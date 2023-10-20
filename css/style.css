@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Hind", sans-serif;
+}
+/* header */
+header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+#navbarport .nav-item .nav-link {
+    color: white;
+    transition: all 0.5s;
+}
+
+#navbarport .nav-item:hover .nav-link {
+    color: #35a22c;
+}
+#navbarport .nav-item .nav-link::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #35a22c;
+    display: block;
+    /* k xài vì đụng bootstrap */
+    /*  display: inline-block;ko chiếm hàng,xét dc width */
+}
+#navbarport .nav-item:hover .nav-link::after {
+    width: 100%;
+}
+/* carousel */
+.carouselPort .carousel-item {
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.carouselPort .carousel-item:nth-child(1) {
+    background-image: url("./../img/finland.jpg");
+}
+.carouselPort .carousel-item:nth-child(2) {
+    background-image: url("./../img/mountains.jpg");
+}
+.carouselPort .carousel-item:nth-child(3) {
+    background-image: url("./../img/mountains-1.jpg");
+}
+.carouselPort .carousel-item img {
+    width: 150px;
+    border-radius: 50%;
+}
+.carouselPort .carousel-caption {
+    transform: translateY(-50%);
+}
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.carousel-indicators .active {
+    background-color: #35a22c;
+}
+/* projects */
+.project__content .nav-pills .nav-link {
+    border: 1px solid black;
+    color: black;
+    margin: 0 10px;
+}
+
+.project__content .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: green;
+    color: white;
+    border-color: green;
+}
+
+.project__content .card {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: none;
+    box-shadow: 0 0 0.4rem #80808066;
+    cursor: pointer;
+}
+
+.project__content .card .card-body {
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 0 0 1rem 1rem;
+    transition: all 0.5s;
+}
+
+.project__content .card .card-body h4 {
+    font-size: 1.2rem;
+}
+
+.project__content .card:hover .card-body {
+    border-color: green;
+    border-top-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+    .project__content .nav-pills .nav-link {
+        margin: 0 5px;
+    }
+}
